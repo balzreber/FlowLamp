@@ -42,6 +42,7 @@
    -  Added: English localization. To switch to English localization, uncomment the ENG directive
    -  Добавлено: новые эффекты "теплый свет", "маятник"
    -  Добавлено: Ноые эффекты - Мерцание, Полицейская сирена (масштаб меняет эффект)
+   -  Добавлено: Новые эффекты - Дрейф, Стая
 
    -  Исправлено: ошибка синхронизации с Home Assistant при управлении лампой через приложение для смартфона
    -  Исправлено: "разгорание" лампы с нуля при изменении яркости из Home Assistant
@@ -54,11 +55,11 @@
 // Для WEMOS выбираем плату LOLIN(WEMOS) D1 R2 & mini
 // Для NodeMCU выбираем NodeMCU 1.0 (ESP-12E Module)
 
-#define ENG // Uncomment it to switch to English localization
+//#define ENG // Uncomment it to switch to English localization
 
 // ============= НАСТРОЙКИ =============
 // -------- ВРЕМЯ -------
-#define GMT 1              // смещение (москва 3)
+#define GMT 5              // смещение (москва 3)
 #define NTP_ADDRESS  "europe.pool.ntp.org"    // сервер времени
 
 // -------- РАССВЕТ -------
@@ -77,8 +78,8 @@
 
 #define MATRIX_TYPE 0         // тип матрицы: 0 - зигзаг, 1 - параллельная
 #define CONNECTION_ANGLE 0    // угол подключения: 0 - левый нижний, 1 - левый верхний, 2 - правый верхний, 3 - правый нижний
-//#define STRIP_DIRECTION 0     // направление ленты из угла: 0 - вправо, 1 - вверх, 2 - влево, 3 - вниз
-#define STRIP_DIRECTION 0     // для вертикальных лент. направление ленты из угла: 0 - вправо, 1 - вверх, 2 - влево, 3 - вниз
+#define STRIP_DIRECTION 0     // направление ленты из угла: 0 - вправо, 1 - вверх, 2 - влево, 3 - вниз
+//#define STRIP_DIRECTION 1     // для вертикальных лент. направление ленты из угла: 0 - вправо, 1 - вверх, 2 - влево, 3 - вниз
 // при неправильной настройке матрицы вы получите предупреждение "Wrong matrix parameters! Set to default"
 // шпаргалка по настройке матрицы здесь! https://alexgyver.ru/matrix_guide/
 

@@ -84,8 +84,8 @@ int Get_EFFIDX (String effect) {
   if (effect.equals("Маятник")) return 23;
   if (effect.equals("Мерцание")) return 24;
   if (effect.equals("Полицейская сирена")) return 25;
-  if (effect.equals("Инкрементная дрифт-роз")) return 26;
-  if (effect.equals("гордость")) return 27;
+  if (effect.equals("Дрейф")) return 26;
+  if (effect.equals("Стая")) return 27;
   if (effect.equals("Демо")) return 28;
 
   #endif
@@ -157,8 +157,8 @@ String Get_EFFName (int eff_idx) {
     case 23: return "Маятник";
     case 24: return "Мерцание";
     case 25: return "Полицейская сирена";
-    case 26: return "Инкрементная дрифт-роз";
-    case 27: return "гордость";
+    case 26: return "Дрейф";
+    case 27: return "Стая";
     case 28: return "Демо";
   }
 
@@ -394,7 +394,7 @@ void HomeAssistantSendDiscoverConfig() {
   #ifdef ENG
   const char eff_list[] = R"=====(, "fx_list": ["Confetti", "Fire", "Rainbow vert", "Rainbow Horiz", "Color change", "3D Madness", "3D clouds", "3D lava", "3D plasma", "3D rainbow", "3D peacock", "3D zebra", "3D forest", "3D ocean", "Color", "Snowfall", "Matrix", "Fireflies",  "Aquarium", "Starfall", "Paintball", "Spiral", "Warm Light", "Pendulum", "Twinkles", "Police Strobo", "Incremental Drift Rose", "Pride", "Demo"] })=====";  // effect_list
   #else
-  const char eff_list[] = R"=====(, "fx_list": ["Конфетти", "Огонь", "Радуга верт.", "Радуга гориз.", "Смена цвета", "Безумие 3D", "Облака 3D", "Лава 3D", "Плазма 3D", "Радуга 3D", "Павлин 3D", "Зебра 3D", "Лес 3D", "Океан 3D", "Цвет", "Снегопад", "Матрица", "Светлячки",  "Аквариум", "Звездопад", "Пейнтбол", "Спираль", "Теплый свет", "Маятник", "Мерцание", "Полицейская сирена", "Инкрементная дрифт-роз", "гордость", "Демо"] })=====";  // effect_list
+  const char eff_list[] = R"=====(, "fx_list": ["Конфетти", "Огонь", "Радуга верт.", "Радуга гориз.", "Смена цвета", "Безумие 3D", "Облака 3D", "Лава 3D", "Плазма 3D", "Радуга 3D", "Павлин 3D", "Зебра 3D", "Лес 3D", "Океан 3D", "Цвет", "Снегопад", "Матрица", "Светлячки",  "Аквариум", "Звездопад", "Пейнтбол", "Спираль", "Теплый свет", "Маятник", "Мерцание", "Полицейская сирена", "Дрейф", "Стая", "Демо"] })=====";  // effect_list
   #endif
   const char dev_reg_tpl[] = R"=====(, "device": {"ids": ["%s"], "name": "Gyver Lamp", "mf": "Alex Gyver", "mdl": "Gyver Lamp v2", "sw": "1.5.5 MQTT"})=====";  // device reg
   char dev_reg[256];

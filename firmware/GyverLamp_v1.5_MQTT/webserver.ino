@@ -525,8 +525,8 @@ void routeHome(){
           out += "<option value='23'>Маятник</option>";
           out += "<option value='24'>Мерцание</option>";
           out += "<option value='25'>Полицейская сирена</option>";
-          out += "<option value='26'>Инкрементная дрифт-роз</option>";
-          out += "<option value='27'>гордость</option>";
+          out += "<option value='26'>Дрейф</option>";
+          out += "<option value='27'>Стая</option>";
           out += "<option value='28'>Демо</option>";
           
         out += "</select>";
