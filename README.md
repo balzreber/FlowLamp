@@ -188,7 +188,7 @@ input_number:
             "accessory": "mqttthing",
             "type": "lightbulb",
             "name": "Gyver Lamp",
-            "url": "http://127.0.01:1883",
+            "url": "http://127.0.0.1:1883",
             "mqttPubOptions": {
                 "retain": false
             },
