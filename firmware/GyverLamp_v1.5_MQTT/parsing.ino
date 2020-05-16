@@ -67,8 +67,21 @@ void parseUDP() {
     } else if (inputBuffer.startsWith("DAWN")) {
       dawnMode = inputBuffer.substring(4).toInt() - 1;
       saveDawnMmode();
-    }
+    } else if (inputBuffer.startsWith("DISCOVER")) {
+        StaticJsonDocument<100> jsonResult;
 
+        jsonResult["deviceID"] = String(ESP.getChipId(), HEX);
+        WiFi.localIP() ? jsonResult["IP"] = WiFi.localIP().toString() : jsonResult["IP"] = WiFi.softAPIP().toString();
+        jsonResult["port"] = AP_PORT;
+
+        inputBuffer = "";
+        serializeJson(jsonResult, inputBuffer);
+    } else if (inputBuffer.startsWith("FX_GET")) {
+
+      inputBuffer = "Off";
+      for (int i=0; i<= MODE_AMOUNT; i++) inputBuffer +="|" +Get_EFFName(i);
+    }
+  
     char reply[inputBuffer.length() + 1];
     inputBuffer.toCharArray(reply, inputBuffer.length() + 1);
     Udp.beginPacket(Udp.remoteIP(), Udp.remotePort());
