@@ -9,9 +9,10 @@
 * [Настройка интеграции с Home Bridge и Apple Home Kit](#chapter-6)
 * [Настройка интеграции с Яндекс Алисой](#chapter-7)
 * [Настройка интеграции с Node-Red](#chapter-8)
-* [Управляющие топики MQTT (для интеграции с системами домашней автоматизации)](#chapter-9)
-* [FAQ](#chapter-10)
-* [Полезная информация](#chapter-11)
+* [Настройка интеграции с Domoticz](#chapter-9)
+* [Управляющие топики MQTT (для интеграции с системами домашней автоматизации)](#chapter-10)
+* [FAQ](#chapter-11)
+* [Полезная информация](#chapter-12)
 [![AlexGyver YouTube](http://alexgyver.ru/git_banner.jpg)](https://www.youtube.com/channel/UCgtAOyEQdAyjvm9ATCi_Aig?sub_confirmation=1)
 
 <a id="chapter-0"></a>
@@ -364,6 +365,15 @@ input_number:
 * [x] в нодах также необходимо заменить ESP-267059 на свой ID
 
 <a id="chapter-9"></a>
+
+## Настройка интеграции с Domoticz
+
+Для интеграции с системой автоматизации Domoticz я написал специальный плагин https://github.com/Whilser/Gyver-Lamp-Domoticz-Plugin После несложной настройки в Domoticz появятся четыре переключателя: уравление лампой, скорость эффекта, масштабирование эффекта и селектор выбора эффекта. 
+
+![Gyver lamp](https://raw.githubusercontent.com/Whilser/Gyver-Lamp-Domoticz-Plugin/master/img/lamp.png)
+
+
+<a id="chapter-10"></a>
 ### Управляющие топики MQTT (для интеграции с прочими системами домашней автоматизации)
 
 Получение статуса лампы:
@@ -411,7 +421,7 @@ input_number:
 
 ```
 
-<a id="chapter-10"></a>
+<a id="chapter-11"></a>
 
 ## FAQ
 ### Основные вопросы
@@ -432,7 +442,7 @@ input_number:
 
 ### Вопросы по этому проекту
 
-<a id="chapter-11"></a>
+<a id="chapter-12"></a>
 ## Полезная информация
 * [Мой сайт](http://alexgyver.ru/)
 * [Основной YouTube канал](https://www.youtube.com/channel/UCgtAOyEQdAyjvm9ATCi_Aig?sub_confirmation=1)
