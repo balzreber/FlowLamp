@@ -266,9 +266,9 @@ void routeInfo() {
 
   out +="<tr>";
   #ifdef ENG
-  out +="<td>Chip ID</th>";
+  out +="<td>Lamp ID</th>";
   #else
-  out +="<td>ID Чипа</th>";
+  out +="<td>ID лампы</th>";
   #endif
   
   out +="<td>                              </th>";

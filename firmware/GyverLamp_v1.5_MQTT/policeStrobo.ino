@@ -32,7 +32,7 @@ void pattern_2()  {
         for (int y = 0; y <  round(HEIGHT/2); y++) {
           drawPixelXY(x, y, CRGB::Red);
         }
-      }
+      }      
      } else {
 
      for (int x = 1; x < WIDTH; x++) {
@@ -93,11 +93,33 @@ void pattern_4() {
   }  
 }
 
+int p5 = 0; int pp5, ppp5 = 0;
+void pattern_5() {
+
+    EVERY_N_MILLIS(modes[currentMode].speed) {
+      p5++; if (p5 >= WIDTH) p5 = 0;
+
+      FastLED.clear(); 
+
+      for (int x = 1; x < round(WIDTH/4) ; x++) {
+        for (int y = 1; y <  HEIGHT; y++) {
+
+          pp5 = x+p5; if (pp5 > WIDTH) pp5 = pp5 - WIDTH;
+          ppp5 = x+p5+round(WIDTH/2); if (ppp5 > WIDTH) ppp5 = ppp5 - WIDTH;
+
+          drawPixelXY(pp5, y, CRGB::Red);
+          drawPixelXY(ppp5, y, CRGB::Blue);
+        }
+      }
+    }
+}
+
 void policeStroboRoutine() {
 
-  if ((modes[currentMode].scale >= 0) && (modes[currentMode].scale < 25)) pattern_1();
-  if ((modes[currentMode].scale >= 25) && (modes[currentMode].scale < 50)) pattern_2();
-  if ((modes[currentMode].scale >= 50) && (modes[currentMode].scale < 75)) pattern_3();
-  if (modes[currentMode].scale >= 75) pattern_4();
+  if ((modes[currentMode].scale >= 0) && (modes[currentMode].scale < 20)) pattern_1();
+  if ((modes[currentMode].scale >= 20) && (modes[currentMode].scale < 40)) pattern_2();
+  if ((modes[currentMode].scale >= 40) && (modes[currentMode].scale < 60)) pattern_3();
+  if ((modes[currentMode].scale >= 60) && (modes[currentMode].scale < 80)) pattern_4();
+  if (modes[currentMode].scale >= 80) pattern_5();
 
 }
