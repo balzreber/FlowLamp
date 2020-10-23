@@ -154,7 +154,7 @@ void drawFrame(int pcnt) {
   }
 }
 
-byte hue;
+//uint8_t hue;
 // ---------------------------------------- радуга ------------------------------------------
 void rainbowVertical() {
   hue += 2;

@@ -61,6 +61,9 @@ void effectsTick() {
           break;
         case 27: prideRoutine();
           break;
+        case 28: butterflysRoutine(false);
+          break;
+          
       }
       FastLED.show();
     }
